@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,7 +21,6 @@ public class Order {
 
     private String orderNumber;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    // @OneToMany( cascade = CascadeType.ALL)
+     @OneToMany( cascade = CascadeType.ALL)
     private List<OrderItems> orderItems;
 }
