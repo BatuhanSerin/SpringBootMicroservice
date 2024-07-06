@@ -21,7 +21,7 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
 
-    @Transactional(readOnly = true)
+    @Transactional
     public void createOrder(OrderRequest orderRequest) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
