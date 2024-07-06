@@ -1,7 +1,6 @@
 package com.example.productService;
 
 import com.example.productService.dto.ProductRequest;
-import com.example.productService.repository.ProductRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +19,6 @@ class ProductServiceApplicationTests {
     private MockMvc mockMvc;
     @Autowired
     private ObjectMapper objectMapper;
-    @Autowired
-    private ProductRepository productRepository;
-
-
     @Test
     void shouldCreateProduct() throws Exception {
         ProductRequest productRequest = getProductRequest();
