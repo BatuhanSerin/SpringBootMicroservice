@@ -21,7 +21,6 @@ public class OrderController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public String createOrderAPI(@RequestBody OrderRequest orderRequest) {
-        orderService.createOrder(orderRequest);
-        return "... Order created ...";
+        return orderService.createOrder(orderRequest);
     }
 }
