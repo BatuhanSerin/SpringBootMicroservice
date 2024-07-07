@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -26,7 +25,7 @@ public class OrderService {
 
     @Value("${stockURI}")
     private String stockURI;
-    
+
     private final WebClient webClient;
     private final OrderRepository orderRepository;
 
