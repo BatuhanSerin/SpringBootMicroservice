@@ -26,7 +26,7 @@ public class OrderService {
     @Value("${stockURI}")
     private String stockURI;
 
-    private final WebClient webClient;
+    private final WebClient.Builder webClientBuilder;
     private final OrderRepository orderRepository;
 
     @Transactional
@@ -44,7 +44,7 @@ public class OrderService {
         List<String> productCodeList = order.getOrderItems().stream().map(orderItem -> orderItem.getProductCode())
                 .toList();
 
-        basketResponse[] basketResponses = webClient.get()
+        basketResponse[] basketResponses = webClientBuilder.build().get()
                 .uri(stockURI,
                         uriBuilder -> uriBuilder.queryParam("productCode", productCodeList).build())
                 .retrieve()
