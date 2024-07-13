@@ -3,12 +3,14 @@ package com.example.basketService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
 import com.example.basketService.model.Basket;
 import com.example.basketService.repository.BasketRepository;
 
-@SpringBootApplication
+@SpringBootApplication	
+@EnableDiscoveryClient
 public class BasketServiceApplication {
 
 	public static void main(String[] args) {
