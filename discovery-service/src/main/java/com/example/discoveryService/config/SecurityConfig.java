@@ -1,6 +1,7 @@
 package com.example.discoveryService.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -20,12 +21,17 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    @Value("${spring.security.user.name}")
+    private String username;
+    @Value("${spring.security.user.password}")
+    private String password;
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("admin")
-                .password("{noop}admin")
+                .withUser(username)
+                .password("{noop}" + password)
                 .authorities("USER");
     }
 
