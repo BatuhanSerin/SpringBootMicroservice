@@ -25,7 +25,7 @@ public class BasketService {
     @SneakyThrows
     public List<basketResponse> checkStock(List<String> productCode) {
         log.info("Checking stock for product codes: {}", productCode);
-        Thread.sleep(10000);
+        // Thread.sleep(10000);
         log.info("Checked stock for product codes: {}", productCode);
         return basketRepository.findByProductCodeIn(productCode).stream()
                 .map(basket -> basketResponse.builder().productCode(basket.getProductCode())
