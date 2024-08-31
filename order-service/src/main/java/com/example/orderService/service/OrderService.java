@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -12,6 +13,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import com.example.orderService.dto.OrderItemsDto;
 import com.example.orderService.dto.OrderRequest;
 import com.example.orderService.dto.basketResponse;
+import com.example.orderService.event.OrderEvent;
 import com.example.orderService.model.Order;
 import com.example.orderService.model.OrderItems;
 import com.example.orderService.repository.OrderRepository;
@@ -28,6 +30,7 @@ public class OrderService {
 
     private final WebClient.Builder webClientBuilder;
     private final OrderRepository orderRepository;
+    private final KafkaTemplate<String, OrderEvent> kafkaTemplate;
 
     @Transactional
     public String createOrder(OrderRequest orderRequest) {
@@ -58,6 +61,7 @@ public class OrderService {
             return ("Some products are not in stock");
         } else {
             orderRepository.save(order);
+            kafkaTemplate.send("notification", order.getOrderNumber(), new OrderEvent(order.getOrderNumber()));
             return "Order Created Successfully";
         }
 
