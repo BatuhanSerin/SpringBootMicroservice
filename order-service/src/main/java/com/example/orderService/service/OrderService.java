@@ -53,10 +53,10 @@ public class OrderService {
                 .retrieve()
                 .bodyToMono(basketResponse[].class)
                 .block();
-
+        System.out.println("basketResponses: " + basketResponses);
         boolean areAllProductsInStock = Arrays.stream(basketResponses)
                 .allMatch(basketResponse -> basketResponse.isInStock());
-
+        System.out.println("areAllProductsInStock: " + areAllProductsInStock);
         if (!areAllProductsInStock) {
             return ("Some products are not in stock");
         } else {

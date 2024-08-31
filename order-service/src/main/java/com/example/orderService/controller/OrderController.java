@@ -1,9 +1,7 @@
 package com.example.orderService.controller;
 
-import java.sql.Time;
 import java.time.LocalTime;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeoutException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

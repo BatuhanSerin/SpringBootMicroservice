@@ -1,82 +1,89 @@
 {
-    "configurations": [
-        {
-            "type": "java",
-            "name": "ApiGatewayApplication",
-            "request": "launch",
-            "mainClass": "com.example.apiGateway.ApiGatewayApplication",
-            "projectName": "api-gateway"
-        },
-        {
-            "type": "java",
-            "name": "ApiGatewayApplication",
-            "request": "launch",
-            "mainClass": "com.example.ApiGatewayApplication",
-            "projectName": "api-gateway"
-        },
-        {
-            "type": "java",
-            "name": "ProductServiceApplication",
-            "request": "launch",
-            "mainClass": "com.example.productService.ProductServiceApplication",
-            "projectName": "product-service",
-            "noDebug": false,
-            "__progressId": "88eb4a3b-8416-449d-a2cc-e9691937a510",
-            "__origin": "internal"
-        },
-        {
-            "type": "java",
-            "name": "DiscoveryServiceApplication",
-            "request": "launch",
-            "mainClass": "com.example.discoveryService.DiscoveryServiceApplication",
-            "projectName": "discovery-service",
-            "noDebug": false,
-            "__progressId": "098ba68e-59a5-41c5-bf3e-97b1bfe804c5",
-            "__origin": "internal"
-        },
-        {
-            "type": "java",
-            "name": "OrderServiceApplication",
-            "request": "launch",
-            "mainClass": "com.example.orderService.OrderServiceApplication",
-            "projectName": "order-service",
-            "noDebug": false,
-            "__progressId": "561ddc25-99c8-4f94-86bb-31778f8a1055",
-            "__origin": "internal"
-        },
-        {
-            "type": "java",
-            "name": "BasketServiceApplication",
-            "request": "launch",
-            "mainClass": "com.example.basketService.BasketServiceApplication",
-            "projectName": "basket-service",
-            "noDebug": false,
-            "__progressId": "b40d304a-efa4-4db8-a65d-f0342675b6be",
-            "__origin": "internal"
-        },
-        {
-            "type": "java",
-            "name": "BasketServiceApplication",
-            "request": "launch",
-            "mainClass": "com.example.basketService.BasketServiceApplication",
-            "projectName": "basketService"
-        },
-        {
-            "type": "java",
-            "name": "OrderServiceApplication",
-            "request": "launch",
-            "mainClass": "com.example.orderService.OrderServiceApplication",
-            "projectName": "orderService"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-ProductServiceApplication<productService>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.productService.ProductServiceApplication",
-            "projectName": "productService",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "java",
+      "name": "NotificationServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.notification_service.NotificationServiceApplication",
+      "projectName": "notification-service"
+    },
+    {
+      "type": "java",
+      "name": "ApiGatewayApplication",
+      "request": "launch",
+      "mainClass": "com.example.apiGateway.ApiGatewayApplication",
+      "projectName": "api-gateway"
+    },
+    {
+      "type": "java",
+      "name": "ApiGatewayApplication",
+      "request": "launch",
+      "mainClass": "com.example.ApiGatewayApplication",
+      "projectName": "api-gateway"
+    },
+    {
+      "type": "java",
+      "name": "ProductServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.productService.ProductServiceApplication",
+      "projectName": "product-service",
+      "noDebug": false,
+      "__progressId": "88eb4a3b-8416-449d-a2cc-e9691937a510",
+      "__origin": "internal"
+    },
+    {
+      "type": "java",
+      "name": "DiscoveryServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.discoveryService.DiscoveryServiceApplication",
+      "projectName": "discovery-service",
+      "noDebug": false,
+      "__progressId": "098ba68e-59a5-41c5-bf3e-97b1bfe804c5",
+      "__origin": "internal"
+    },
+    {
+      "type": "java",
+      "name": "OrderServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.orderService.OrderServiceApplication",
+      "projectName": "order-service",
+      "noDebug": false,
+      "__progressId": "561ddc25-99c8-4f94-86bb-31778f8a1055",
+      "__origin": "internal"
+    },
+    {
+      "type": "java",
+      "name": "BasketServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.basketService.BasketServiceApplication",
+      "projectName": "basket-service",
+      "noDebug": false,
+      "__progressId": "b40d304a-efa4-4db8-a65d-f0342675b6be",
+      "__origin": "internal"
+    },
+    {
+      "type": "java",
+      "name": "BasketServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.basketService.BasketServiceApplication",
+      "projectName": "basketService"
+    },
+    {
+      "type": "java",
+      "name": "OrderServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.orderService.OrderServiceApplication",
+      "projectName": "orderService"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ProductServiceApplication<productService>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.productService.ProductServiceApplication",
+      "projectName": "productService",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
 }

@@ -23,8 +23,9 @@ public class BasketController {
     @ResponseBody
     // public boolean checkStock(@PathVariable("productCode") String productCode) {
     public List<basketResponse> checkStock(@RequestParam List<String> productCode) {
+        System.out.println("productCode: " + basketService.checkStock(productCode));
         return basketService.checkStock(productCode);
-      
+
     }
 
 }
